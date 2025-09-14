@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon Support -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="msapplication-TileColor" content="#00e676" />
+<meta name="theme-color" content="#0a0a0a" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Let Me GPT That For You" />
+<meta property="og:description" content="For all those people who find it more convenient to ask you instead of AI" />
+<meta property="og:image" content="https://lmgpttfy.io/images/og-image.png" />
+<meta property="og:url" content="https://lmgpttfy.io" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LMGPTTFY" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Let Me GPT That For You" />
+<meta name="twitter:description" content="Generate animated ChatGPT search links" />
+<meta name="twitter:image" content="https://lmgpttfy.io/images/twitter-card.png" />
+<meta name="twitter:site" content="@lmgpttfy" />
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="LMGPTTFY" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://lmgpttfy.io" />
+
+<!-- External Resources -->
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Let Me GPT That For You</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Let Me GPT That For You</h1>
+        <div class="animation">
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </div>
+        <form id="redirect-form" action="https://chatgpt.com" method="get">
+            <input type="hidden" name="q" value="{{ query }}" />
+            <input type="hidden" name="hints" value="search" />
+        </form>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

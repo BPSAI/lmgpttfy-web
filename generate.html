@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon Support -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="msapplication-TileColor" content="#00e676" />
+<meta name="theme-color" content="#0a0a0a" />
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Let Me GPT That For You" />
+<meta property="og:description" content="For all those people who find it more convenient to ask you instead of AI" />
+<meta property="og:image" content="https://lmgpttfy.io/images/og-image.png" />
+<meta property="og:url" content="https://lmgpttfy.io" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LMGPTTFY" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Let Me GPT That For You" />
+<meta name="twitter:description" content="Generate animated ChatGPT search links" />
+<meta name="twitter:image" content="https://lmgpttfy.io/images/twitter-card.png" />
+<meta name="twitter:site" content="@lmgpttfy" />
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="LMGPTTFY" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://lmgpttfy.io" />
+
+<!-- External Resources -->
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Your LMGPTTFY Link is Ready!</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">
+                <a href="index.html" style="color: inherit; text-decoration: none;">Let Me GPT That For You</a>
+            </h1>
+        </header>
+
+        <main class="generate-main">
+            <div class="success-message">
+                <div class="success-icon"></div>
+                <h2>Your Link is Ready!</h2>
+                <p id="queryDisplay" class="query-display"></p>
+            </div>
+
+            <div class="link-section">
+                <div class="link-container">
+                    <input type="text" id="linkInput" class="link-input" readonly aria-label="Generated link" />
+                    <button id="copyBtn" class="copy-btn">
+                        <span class="copy-text">Copy</span>
+                        <span class="copied-text" style="display: none;">Copied!</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="previewBtn" class="action-btn primary">
+                    Preview Animation
+                </button>
+                <button id="newQueryBtn" class="action-btn secondary">
+                    New Query
+                </button>
+            </div>
+
+            <div class="share-section">
+                <h3>Share this link:</h3>
+                <div class="share-buttons">
+                    <button id="shareTwitter" class="share-btn twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="..."/>
+                        </svg>
+                        Twitter
+                    </button>
+                    <button id="shareReddit" class="share-btn reddit">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="..."/>
+                        </svg>
+                        Reddit
+                    </button>
+                    <button id="shareEmail" class="share-btn email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="..."/>
+                        </svg>
+                        Email
+                    </button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>How it works:</h3>
+                <ol>
+                    <li>Send this link to someone who asked a question</li>
+                    <li>They'll see an animation typing out their question</li>
+                    <li>A sarcastic message tells them to press Enter</li>
+                    <li>They're redirected to ChatGPT with the question ready</li>
+                    <li>All they have to do is press Enter!</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer>
+            <p class="copyright">&copy; 2024 LMGPTTFY &middot; <a href="index.html">Generate Another</a></p>
+        </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

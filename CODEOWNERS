@@ -1,0 +1,29 @@
+# CODEOWNERS for LMGPTTFY-Web
+# This file defines who is responsible for code review in this repository
+# For more info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global Owners - These users will be requested for review on all changes
+* @Buschleague @56BadKarma
+
+# Frontend Files
+*.html @Buschleague @56BadKarma
+*.css @Buschleague @56BadKarma
+*.js @Buschleague @56BadKarma
+
+# Documentation
+*.md @Buschleague @56BadKarma
+LICENSE @Buschleague @56BadKarma
+
+# Configuration Files
+CNAME @Buschleague
+.gitignore @Buschleague @56BadKarma
+site.webmanifest @Buschleague @56BadKarma
+
+# Images and Assets
+/images/ @Buschleague @56BadKarma
+*.png @Buschleague @56BadKarma
+*.ico @Buschleague @56BadKarma
+
+# GitHub Specific
+/.github/ @Buschleague
+CODEOWNERS @Buschleague
