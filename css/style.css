@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-main), serif;
     background: var(--bg-primary);
     background-image: 
         radial-gradient(circle at 20% 80%, rgba(0, 230, 118, 0.1) 0%, transparent 50%),
@@ -113,7 +113,7 @@ main {
     border-radius: 12px;
     color: var(--text-primary);
     transition: all 0.3s ease;
-    font-family: var(--font-main);
+    font-family: var(--font-main), serif;
 }
 
 .query-input:focus {
@@ -139,86 +139,7 @@ main {
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
     text-transform: uppercase;
-    letter-spacing: 0.05em;/* Add this CSS to your style.css file to ensure SVG icons are visible */
-
-/* Share button SVG icon fixes */
-.share-btn svg {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 0.25rem;
-    fill: currentColor;
-    flex-shrink: 0;
-}
-
-.share-btn {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.share-btn span {
-    display: inline-block;
-}
-
-/* Ensure SVGs are visible with explicit color */
-.share-btn.twitter svg {
-    fill: #ffffff;
-}
-
-.share-btn.reddit svg {
-    fill: #ffffff;
-}
-
-.share-btn.email svg {
-    fill: #ffffff;
-}
-
-/* Hover states with icon color changes */
-.share-btn.twitter:hover svg {
-    fill: #1DA1F2;
-}
-
-.share-btn.reddit:hover svg {
-    fill: #FF4500;
-}
-
-.share-btn.email:hover svg {
-    fill: #00e676;
-}
-
-/* Footer social links SVG fixes */
-.social-links svg {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    fill: currentColor;
-}
-
-/* Fallback for invisible SVGs - use emoji icons */
-.share-btn.twitter::before {
-    content: "𝕏 ";
-    font-weight: bold;
-    margin-right: 0.25rem;
-}
-
-.share-btn.reddit::before {
-    content: "🔗 ";
-    margin-right: 0.25rem;
-}
-
-.share-btn.email::before {
-    content: "✉️ ";
-    margin-right: 0.25rem;
-}
-
-/* Hide the pseudo-elements if SVG is working */
-.share-btn svg:not([width="0"]) + ::before {
-    display: none;
-}
+    letter-spacing: 0.05em;
 }
 
 .generate-btn:hover {
@@ -317,7 +238,7 @@ main {
     border: none;
     color: var(--text-primary);
     padding: 0.75rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono), serif;
     font-size: 0.875rem;
 }
 
@@ -401,8 +322,9 @@ main {
 }
 
 .share-btn {
-    display: flex;
+    display: inline-flex !important;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
     border: 1px solid var(--border-color);
@@ -432,6 +354,33 @@ main {
 .share-btn.email:hover {
     border-color: var(--accent-primary);
     color: var(--accent-primary);
+}
+
+/* Share button SVG icon styles */
+.share-btn svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.share-btn span {
+    display: inline-block;
+}
+
+/* SVG colors on hover */
+.share-btn.twitter:hover svg {
+    fill: #1DA1F2;
+}
+
+.share-btn.reddit:hover svg {
+    fill: #FF4500;
+}
+
+.share-btn.email:hover svg {
+    fill: var(--accent-primary);
 }
 
 /* Instructions */
@@ -487,6 +436,14 @@ footer {
     color: var(--accent-primary);
 }
 
+.social-links svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
 .copyright {
     color: var(--text-muted);
     font-size: 0.875rem;
@@ -540,27 +497,27 @@ footer {
     .container {
         padding: 1rem;
     }
-    
+
     .logo {
         font-size: 2rem;
     }
-    
+
     .tagline {
         font-size: 1rem;
     }
-    
+
     .input-group {
         flex-direction: column;
     }
-    
+
     .actions {
         flex-direction: column;
     }
-    
+
     .share-buttons {
         flex-direction: column;
     }
-    
+
     .share-btn {
         width: 100%;
         justify-content: center;
@@ -571,11 +528,11 @@ footer {
     .input-group {
         flex-direction: row;
     }
-    
+
     .query-input {
         flex: 1;
     }
-    
+
     .generate-btn {
         width: auto;
         padding: 1rem 2.5rem;
@@ -598,80 +555,6 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-primary);
-}
-
-.share-btn svg {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 0.25rem;
-    fill: currentColor;
-    flex-shrink: 0;
-}
-
-.share-btn {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.share-btn span {
-    display: inline-block;
-}
-
-.share-btn.twitter svg {
-    fill: #ffffff;
-}
-
-.share-btn.reddit svg {
-    fill: #ffffff;
-}
-
-.share-btn.email svg {
-    fill: #ffffff;
-}
-
-.share-btn.twitter:hover svg {
-    fill: #1DA1F2;
-}
-
-.share-btn.reddit:hover svg {
-    fill: #FF4500;
-}
-
-.share-btn.email:hover svg {
-    fill: #00e676;
-}
-
-.social-links svg {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    fill: currentColor;
-}
-
-.share-btn.twitter::before {
-    content: "𝕏 ";
-    font-weight: bold;
-    margin-right: 0.25rem;
-}
-
-.share-btn.reddit::before {
-    content: "🔗 ";
-    margin-right: 0.25rem;
-}
-
-.share-btn.email::before {
-    content: "✉️ ";
-    margin-right: 0.25rem;
-}
-
-/* Hide the pseudo-elements if SVG is working */
-.share-btn svg:not([width="0"]) + ::before {
-    display: none;
 }
 
 /* Accessibility */
