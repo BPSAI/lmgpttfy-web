@@ -31,7 +31,7 @@ html {
 body {
     font-family: var(--font-main), serif;
     background: var(--bg-primary);
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 80%, rgba(0, 230, 118, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(0, 230, 118, 0.05) 0%, transparent 50%);
     color: var(--text-primary);
@@ -50,6 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items: center;
 }
 
 /* Header */
@@ -57,6 +58,7 @@ header {
     text-align: center;
     margin-bottom: 3rem;
     animation: fadeInDown 0.6s ease-out;
+    width: 100%;
 }
 
 .logo {
@@ -89,13 +91,14 @@ main {
     flex-direction: column;
     align-items: center;
     animation: fadeIn 0.8s ease-out;
+    width: 100%;
 }
 
 /* Form Styles */
 .query-form {
     width: 100%;
     max-width: 600px;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
 }
 
 .input-group {
@@ -155,6 +158,8 @@ main {
 .examples {
     text-align: center;
     margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
 }
 
 .examples p {
@@ -413,6 +418,7 @@ footer {
     padding: 2rem 0;
     margin-top: auto;
     border-top: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .footer-content {
@@ -494,20 +500,64 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+
     .container {
-        padding: 1rem;
+        padding: 1rem 0.75rem;
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
     }
 
     .tagline {
         font-size: 1rem;
+        padding: 0 1rem;
+        line-height: 1.4;
+    }
+
+    .sub-tagline {
+        font-size: 0.875rem;
+        padding: 0 1rem;
     }
 
     .input-group {
         flex-direction: column;
+    }
+
+    .query-input {
+        padding: 1.25rem 1rem;
+        font-size: 1.125rem;
+        width: 100%;
+    }
+
+    .generate-btn {
+        padding: 1.25rem 2rem;
+        font-size: 1.125rem;
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    .examples {
+        padding: 0 1rem;
+    }
+
+    .examples p {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .example-btn {
+        display: block;
+        width: 100%;
+        padding: 0.875rem 1rem;
+        margin: 0.5rem auto;
+        font-size: 1rem;
+        text-align: center;
     }
 
     .actions {
@@ -515,12 +565,74 @@ footer {
     }
 
     .share-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.75rem;
     }
 
     .share-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
         width: 100%;
         justify-content: center;
+    }
+
+    .generate-main {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .success-message h2 {
+        font-size: 1.75rem;
+    }
+
+    .query-display {
+        font-size: 1.125rem;
+        padding: 0 0.75rem;
+        word-break: break-word;
+    }
+
+    .link-container {
+        flex-direction: column;
+        padding: 0.75rem;
+    }
+
+    .link-input {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.875rem;
+        word-break: break-all;
+    }
+
+    .copy-btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        padding: 1.125rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-content {
+        gap: 0.75rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-links svg {
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -536,6 +648,30 @@ footer {
     .generate-btn {
         width: auto;
         padding: 1rem 2.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    header, main, footer {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .examples {
+        width: 100%;
+        max-width: 600px;
     }
 }
 
@@ -568,4 +704,15 @@ footer {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+    button, .action-btn, .share-btn, .example-btn {
+        min-height: 48px;
+    }
+
+    .social-links a {
+        padding: 8px;
+    }
 }

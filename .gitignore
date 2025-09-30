@@ -1,9 +1,7 @@
-# OS Files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Editor directories and files
 .idea/
 .vscode/
 *.sublime-project
@@ -12,18 +10,14 @@ desktop.ini
 *.swo
 *~
 
-# Logs
 *.log
 npm-debug.log*
 
-# Dependencies (if you add any build tools later)
 node_modules/
 
-# Build output (if you add any build process later)
 dist/
 build/
 
-# Environment files (shouldn't exist in static site, but just in case)
 .env
 .env.local
 
@@ -41,7 +35,7 @@ build/
 *.tar.gz
 *.rar
 
-# SSL certificates (for local HTTPS testing)
+# SSL
 *.pem
 *.key
 *.crt
